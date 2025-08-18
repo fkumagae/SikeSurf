@@ -1,0 +1,89 @@
+/* Barra de navegação */
+nav {
+  background-color: #044c86;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Compensar a altura da barra fixa */
+body {
+  margin-top: 60px;
+  font-family: Arial, sans-serif;
+}
+
+.img-responsiva {
+  max-width: 100%;     /* Responsiva: nunca ultrapassa a largura do container */
+  height: auto;        /* Mantém proporção */
+  border-radius: 15px; /* Borda arredondada */
+  display: block;      /* Evita espaços extras abaixo da imagem */
+  margin: 10px auto;   /* Centraliza horizontalmente */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra suave */
+}
+
+.iframe-responsivo {
+  width: 85%;            /* Largura maior para melhor visualização */
+  height: 500px;
+  border: none;
+  border-radius: 15px;       /* Bordas arredondadas */
+  display: block;            /* Ocupa linha inteira */
+  margin: 0 auto 20px auto;  /* Centraliza e adiciona espaçamento inferior */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra suave */
+  max-width: 100%;           /* Evita ultrapassar o tamanho da tela */
+}
+
+/* Estilo do título principal */
+.titulo-principal {
+  font-size: 3em;       /* Fonte grande */
+  font-weight: bold;    /* Negrito */
+  text-align: center;   /* Centralizado */
+  color: #2196f3;       /* Azul destaque */
+  margin-top: 20px;     /* Espaço acima */
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.2); /* Sombra suave */
+}
+.titulo2 {
+  font-size: 2em;       /* Fonte média */
+  font-weight: normal;  /* Normal */
+  text-align: center;   /* Centralizado */
+  color: #000000;          /* Cor escura */
+}
+.titulo3 {
+  font-size: 2em;       /* Fonte média */
+  font-weight: bold;  /* Normal */
+  text-align: center;   /* Centralizado */
+  color: #000000;          /* Cor escura */
+}
+.rodape {
+  background-color: #2196f3;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 40px;
+}
+
+.rodape a {
+  color: #ffeb3b;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.rodape a:hover {
+  text-decoration: underline;
+}
+
+.redes-sociais {
+  margin: 10px 0;
+}
