@@ -1,0 +1,398 @@
+/* Barra de navegação */
+nav {
+  background-color: #044c86;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Compensar a altura da barra fixa */
+body {
+  margin-top: 60px;
+  font-family: Arial, sans-serif;
+}
+
+.img-responsiva {
+  max-width: 100%;     /* Responsiva: nunca ultrapassa a largura do container */
+  height: auto;        /* Mantém proporção */
+  border-radius: 15px; /* Borda arredondada */
+  display: block;      /* Evita espaços extras abaixo da imagem */
+  margin: 10px auto;   /* Centraliza horizontalmente */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra suave */
+}
+
+.iframe-responsivo {
+  width: 85%;            /* Largura maior para melhor visualização */
+  height: 500px;
+  border-radius: 15px;       /* Bordas arredondadas */
+  display: block;            /* Ocupa linha inteira */
+  margin: 0 auto 20px auto;  /* Centraliza e adiciona espaçamento inferior */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra suave */
+  max-width: 100%;           /* Evita ultrapassar o tamanho da tela */
+}
+
+/* Estilo do título principal */
+.titulo-principal {
+  font-size: 3em;       /* Fonte grande */
+  font-weight: bold;    /* Negrito */
+  text-align: center;   /* Centralizado */
+  color: #2196f3;       /* Azul destaque */
+  margin-top: 20px;     /* Espaço acima */
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.2); /* Sombra suave */
+}
+.titulo2 {
+  font-size: 2em;       /* Fonte média */
+  font-weight: normal;  /* Normal */
+  text-align: center;   /* Centralizado */
+  color: #000000;          /* Cor escura */
+}
+.titulo3 {
+  font-size: 2em;       /* Fonte média */
+  font-weight: bold;  /* Normal */
+  text-align: center;   /* Centralizado */
+  color: #000000;          /* Cor escura */
+}
+.rodape {
+  background-color: #2196f3;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 40px;
+}
+
+.rodape a {
+  color: #ffeb3b;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.rodape a:hover {
+  text-decoration: underline;
+}
+
+.redes-sociais {
+  margin: 10px 0;
+}
+
+
+
+.form-container {
+  max-width: 500px;             /* Largura máxima */
+  margin: 40px auto;            /* Centraliza na tela */
+  padding: 30px;                /* Espaçamento interno */
+  background-color: #ffffff;    /* Fundo branco */
+  border-radius: 10px;          /* Bordas arredondadas */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Sombra suave */
+  font-family: Arial, sans-serif;
+}
+
+/* Cada grupo de campo */
+.form-group {
+  margin-bottom: 20px;          /* Espaço entre campos */
+}
+
+/* Labels */
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.form-group .row label {
+  font-weight: normal;
+  color: #555;
+}
+
+/* Inputs gerais */
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 15px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Foco nos campos */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0,123,255,0.3);
+  outline: none;
+}
+
+/* Botão */
+button {
+  width: 100%;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Galeria de pranchas */
+.board-gallery {
+  --board-color: #0ea5e9;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(120px, 1fr));
+  gap: 16px;
+  margin: 20px 0;
+}
+.board-gallery .thumb {
+  border: 2px solid #ccc;
+  background: #fff;
+  border-radius: 12px;
+  padding: 8px;
+  cursor: pointer;
+  transition: box-shadow 0.2s, border-color 0.2s;
+  outline: none;
+}
+.board-gallery .thumb:hover {
+  border-color: var(--board-color);
+  box-shadow: 0 6px 18px rgba(0,0,0,.06);
+}
+.board-gallery .thumb.active,
+.board-gallery .thumb.selecionado {
+  border-color: var(--board-color);
+  box-shadow: 0 8px 24px rgba(14,165,233,.25);
+  outline: 2px solid var(--board-color);
+}
+.board-gallery .label {
+  display: block;
+  text-align: center;
+  margin-top: 6px;
+  font-size: 1em;
+}
+@media (max-width: 700px) {
+  .board-gallery { grid-template-columns: repeat(2, 1fr); }
+}
+
+#miniaturaPrancha {
+  margin: 20px 0;
+  text-align: center;
+}
+
+/* Banner de boas-vindas */
+#welcome-banner {
+  background: linear-gradient(90deg, #2196f3 60%, #0ea5e9 100%);
+  color: #fff;
+  text-align: center;
+  padding: 16px 0;
+  font-size: 1.3em;
+  font-weight: bold;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  transition: opacity 0.4s;
+}
+#welcome-banner.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+#welcome-banner button {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  background: #fff;
+  color: #2196f3;
+  border: none;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#welcome-banner button::after {
+  content: '×';
+  font-size: 1.2em;
+  color: #2196f3;
+}
+
+#digital-clock {
+  position: fixed;
+  top: 12px;
+  right: 60px;
+  background: rgba(33,150,243,0.95);
+  color: #fff;
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 1.2em;
+  padding: 6px 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  z-index: 2100;
+  letter-spacing: 2px;
+}
+
+/* Tema escuro */
+body.dark-theme {
+  background: #181a1b;
+  color: #e0e0e0;
+}
+
+body.dark-theme .titulo2,
+body.dark-theme .titulo3 {
+  color: #fff;
+}
+
+body.dark-theme nav {
+  background-color: #222c36;
+}
+body.dark-theme .rodape {
+  background-color: #222c36;
+  color: #e0e0e0;
+}
+body.dark-theme #digital-clock {
+  background: #222c36;
+  color: #ffeb3b;
+}
+body.dark-theme #welcome-banner {
+  background: linear-gradient(90deg, #222c36 60%, #181a1b 100%);
+  color: #ffeb3b;
+}
+.theme-toggle-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: #2196f3;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  font-size: 1.5em;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  z-index: 2200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body.dark-theme .theme-toggle-btn {
+  background: #222c36;
+  color: #ffeb3b;
+}
+
+.form-container {
+  margin: 2rem auto;
+  max-width: 400px;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px #0002;
+  padding: 2rem;
+}
+.form-container input,
+.form-container select,
+.form-container textarea,
+.form-container label {
+  color: #222;
+  background: #f8f8f8;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+body.dark-theme .form-container {
+  background: #222c36;
+}
+body.dark-theme .form-container input,
+body.dark-theme .form-container select,
+body.dark-theme .form-container textarea,
+body.dark-theme .form-container label {
+  color: #dedccf;
+  background: #222f3b;
+  border-color: #bebca5;
+}
+
+#resultado-volume {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+#roleta-container {
+  position: fixed;
+  bottom: 80px;
+  left: 24px;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px #0002;
+  padding: 1.2rem 1.5rem;
+  z-index: 2300;
+  text-align: center;
+  min-width: 220px;
+}
+body.dark-theme #roleta-container {
+  background: #222c36;
+  color: #ffeb3b;
+}
+#roleta-btn {
+  background: #2196f3;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 18px;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.2s;
+}
+body.dark-theme #roleta-btn {
+  background: #ffeb3b;
+  color: #222c36;
+}
+#roleta-result {
+  font-size: 1.2em;
+  margin: 10px 0;
+  font-weight: bold;
+}
+#roleta-pontos {
+  font-size: 1.1em;
+  margin-top: 8px;
+  color: #0ea5e9;
+}
+body.dark-theme #roleta-pontos {
+  color: #ffeb3b;
+}
